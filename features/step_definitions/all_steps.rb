@@ -5,7 +5,7 @@ module PhraseHelpers
   end
 
   def generate_new_phrase
-    within('.form-actions') { click_link_or_button 'Generate' }
+    within('.control-group') { click_link_or_button 'Generate' }
   end
 
 end

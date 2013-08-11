@@ -1,39 +1,40 @@
 .navbar
-  .navbar-inner
-    .container
-    <a href="/" class="brand">passphrase</a>
+  .container
+    .brand
+      safe-passphrase
 
 .container
   .row
-    .span5
-      .panel
-        %form(accept-charset="UTF-8" action="/passphrase" class="form-horizontal" method="get")
-          %div(style="margin:0;padding:0;display:inline")
-            %input(name="utf8" type="hidden" value="&#x2713;")
-          %fieldset
-            .control-group
-              %label(class='control-label')
-                Phrase structure:
-              .controls
-                %label(class='radio')
-                  %input(checked="checked" id="style_surprise_me" name="style" type="radio" value="surprise me")
-                  surprise me
-                %label(class='radio')
-                  %input(id="style_subject" name="style" type="radio" value="subject")
-                  subject
-                %label(class='radio')
-                  %input(id="style_verb" name="style" type="radio" value="verb")
-                  verb
-                %label(class='radio')
-                  %input(id="style_subject_verb" name="style" type="radio" value="subject verb")
-                  subject verb
-            .form-actions
-              %input(class="btn btn-primary" name="commit" type="submit" value="Generate")
-
-  .span7
     .panel
-      %p
-        Your new passphrase is:
-      %h1
-        = passphrase
+      %form(accept-charset='UTF-8' action='/passphrase' class='form-horizontal' method='get')
+        %fieldset
+          .control-group
+            %label(class='control-label')
+              Phrase structure:
+
+            .controls
+              - Generator.all_styles.each do |st|
+                %label.radio
+                  - if chosen_style == st
+                    %input(name='style' type='radio' value="#{st}" checked='checked')
+                  - else
+                    %input(name='style' type='radio' value="#{st}")
+                  = st
+
+              %input(class='btn' name='commit' type='submit' value='Generate')
+
+  .panel
+    %p
+      Your new passphrase is:
+    %h1
+      = passphrase
+
+  .panel
+    %p
+      Now use this to construct a safe passphrase that includes some capitals, digits, special characters
+      and an indication of the website you're using. For example, you might set your
+      %strong facebook
+      password to:
+    %h2
+      #{passphrase.gsub(/e/, '3').gsub(/s/, '5').gsub(/i/, '1').capitalize}+face
 

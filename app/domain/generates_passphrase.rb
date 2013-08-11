@@ -12,6 +12,7 @@ class GeneratesPassphrase
   def run
     generator = Generator.new(@style)
     phrase = generator.run
+    [phrase, @style]
   end
 
 end

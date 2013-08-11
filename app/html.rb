@@ -6,16 +6,18 @@ require_relative 'domain/generates_passphrase'
 class PassGen < Sinatra::Base
 
   get '/' do
-    phrase = GeneratesPassphrase.new(params[:style]).run
+    phrase, style = GeneratesPassphrase.new(params[:style]).run
     haml :index, locals: {
-      passphrase: phrase
+      passphrase:   phrase,
+      chosen_style: style,
     }
   end
 
   get '/passphrase' do
-    phrase = GeneratesPassphrase.new(params[:style]).run
+    phrase, style = GeneratesPassphrase.new(params[:style]).run
     haml :index, locals: {
-      passphrase: phrase
+      passphrase:   phrase,
+      chosen_style: style,
     }
   end
 
