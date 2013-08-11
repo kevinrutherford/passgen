@@ -2,7 +2,7 @@ require 'sinatra/base'
 
 class PassGen < Sinatra::Base
   get '/' do
-    'Hello PassGen!'
+    haml :index
   end
 
   # start the server if ruby file executed directly
