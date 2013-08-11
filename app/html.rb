@@ -2,6 +2,7 @@ require 'sinatra/base'
 require 'haml'
 
 require_relative 'domain/generates_passphrase'
+require_relative 'domain/example'
 
 class PassGen < Sinatra::Base
 
@@ -10,6 +11,7 @@ class PassGen < Sinatra::Base
     haml :index, locals: {
       passphrase:   phrase,
       chosen_style: style,
+      example:      Example.new(phrase, 'face'),
     }
   end
 
@@ -18,6 +20,7 @@ class PassGen < Sinatra::Base
     haml :index, locals: {
       passphrase:   phrase,
       chosen_style: style,
+      example:      Example.new(phrase, 'face'),
     }
   end
 

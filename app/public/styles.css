@@ -54,3 +54,7 @@ label {
   background-color:rgb(143, 166, 89);
 }
 
+p, label {
+  color: #666;
+}
+
