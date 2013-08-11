@@ -3,10 +3,8 @@ source 'http://rubygems.org'
 gem 'rake'
 gem 'sinatra'
 gem 'haml'
-gem 'pg'
 
 group :development, :test do
-  gem 'thin'
   gem 'capybara'
   gem 'capybara-webkit'
   gem 'database_cleaner'
