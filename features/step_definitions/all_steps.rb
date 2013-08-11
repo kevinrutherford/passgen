@@ -4,6 +4,10 @@ module PhraseHelpers
     page.find('h1').text
   end
 
+  def generate_new_phrase
+    within('.form-actions') { click_link_or_button 'Generate' }
+  end
+
 end
 World(PhraseHelpers)
 
@@ -17,11 +21,11 @@ When /^I visit the site for the first time$/ do
 end
 
 When /^I generate another$/ do
-  click_link_or_button 'Generate'
+  generate_new_phrase
 end
 
 When /^I generate a passphrase/ do
-  click_link_or_button 'Generate'
+  generate_new_phrase
 end
 
 When /^I select a particular phrase structure$/ do

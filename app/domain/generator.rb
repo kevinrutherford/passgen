@@ -1,5 +1,6 @@
+require_relative 'password'
+
 class Generator
-  include FormFodder
 
   def self.all_styles
     [

@@ -1,7 +1,8 @@
+require_relative 'generator'
+
 class GeneratesPassphrase
 
-  def initialize(style, ui)
-    @ui = ui
+  def initialize(style)
     @style = style
     if @style.nil? || @style.empty?
       @style = 'surprise me'
@@ -11,7 +12,6 @@ class GeneratesPassphrase
   def run
     generator = Generator.new(@style)
     phrase = generator.run
-    @ui.display_phrase(phrase, @style)
   end
 
 end

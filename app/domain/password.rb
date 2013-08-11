@@ -1,4 +1,8 @@
 require 'securerandom'
+require_relative 'adjective'
+require_relative 'adverb'
+require_relative 'noun'
+require_relative 'verb'
 
 class Password
 
@@ -44,7 +48,7 @@ private
   end
 
   def pluralize(word, should)
-    should ? word.pluralize : word
+    should ? "#{word}s" : word
   end
 
   def coin_toss
