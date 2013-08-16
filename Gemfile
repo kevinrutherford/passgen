@@ -3,11 +3,9 @@ source 'http://rubygems.org'
 gem 'rake'
 gem 'sinatra'
 gem 'haml'
+gem 'activesupport'
 
 group :development, :test do
-  gem 'capybara'
-  gem 'capybara-webkit'
-  gem 'database_cleaner'
   gem 'headless'
   gem 'launchy'
   gem 'rack-test'

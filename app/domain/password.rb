@@ -1,4 +1,5 @@
 require 'securerandom'
+require 'active_support/inflector'
 require_relative 'adjective'
 require_relative 'adverb'
 require_relative 'noun'
@@ -48,7 +49,7 @@ private
   end
 
   def pluralize(word, should)
-    should ? "#{word}s" : word
+    should ? word.pluralize : word
   end
 
   def coin_toss

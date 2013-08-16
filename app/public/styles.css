@@ -58,3 +58,15 @@ p, label {
   color: #666;
 }
 
+.footer {
+  margin-top: 30px;
+  font-size: 85%;
+  text-align: right;
+  color: #000;
+}
+  .footer a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+  }
+
