@@ -5,29 +5,36 @@
 
 .container
   .row
-    .panel
-      %form(accept-charset='UTF-8' action='/passphrase' class='form-horizontal' method='get')
-        %fieldset
-          .control-group
-            %label(class='control-label')
-              Phrase structure:
+    %p
+      A strong, safe password is best constructed from two or three memorable words that are
+      not usually seen together, combined with a different keyword per website or account.
+      So ...
 
-            .controls
-              - Generator.all_styles.each do |st|
-                %label.radio
-                  - if chosen_style == st
-                    %input(name='style' type='radio' value="#{st}" checked='checked')
-                  - else
-                    %input(name='style' type='radio' value="#{st}")
-                  = st
+  .panel
+    %form(accept-charset='UTF-8' action='/passphrase' class='form-horizontal' method='get')
+      %fieldset
+        .control-group
+          %label(class='control-label')
+            Select a phrase structure:
 
-              %input(class='btn' name='commit' type='submit' value='Generate')
+          .controls
+            - Generator.all_styles.each do |st|
+              %label.radio
+                - if chosen_style == st
+                  %input(name='style' type='radio' value="#{st}" checked='checked')
+                - else
+                  %input(name='style' type='radio' value="#{st}")
+                = st
+
+            %input(class='btn' name='commit' type='submit' value='Generate a passphrase')
 
   .panel
     %p
       Your new passphrase is:
     %h1
       = passphrase
+    %p
+      (Refresh the page until you see a phrase that sticks in your mind.)
 
   .panel
     %p
