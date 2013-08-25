@@ -3,54 +3,111 @@ require 'securerandom'
 class Adverb
 
   ADVERBS = %w{
+    accidentally
     acidly
     almost
+    already
     always
     angrily
+    annually
+    anxiously
+    awkwardly
     badly
+    beautifully
+    before
     bleakly
     blindly
     boldly
     bravely
     briefly
+    brightly
     briskly
     broadly
     busily
     calmly
+    carefully
+    carelessly
+    cautiously
+    cheerfully
     clearly
     closely
+    constantly
     coolly
+    correctly
+    courageously
     crossly
     cruelly
     daily
+    daringly
     dearly
     deeply
+    deliberately
     dimly
+    doubtfully
+    eagerly
+    earlier
+    early
     easily
+    elegantly
+    enormously
+    enthusiastically
     equally
     even
     evenly
+    eventually
+    ever
     exactly
     fairly
+    faithfully
     far
     fast
     fatally
+    fiercely
+    finally
+    first
     fondly
+    foolishly
+    formerly
+    fortnightly
+    fortunately
     frankly
+    frantically
     freely
+    frequently
     fully
+    generally
+    generously
     gently
     gladly
+    gracefully
     greatly
+    greedily
     happily
+    hard
     hastily
+    healthily
     heavily
     highly
+    honestly
     hourly
+    hungrily
+    hurriedly
+    inadequately
+    infrequently
+    ingeniously
+    innocently
+    inquisitively
+    irritably
+    joyously
+    just
     justly
     keenly
     kindly
     kookily
+    last
+    late
+    lately
+    later
     lazily
     less
     lightly
@@ -65,18 +122,36 @@ class Adverb
     merrily
     monthly
     more
+    mortally
     mostly
+    mysteriously
     nearly
     neatly
     needily
+    nervously
     never
+    next
     nicely
+    nightly
     noisily
+    normally
+    now
+    obediently
+    occasionally
     oddly
     often
     only
     openly
+    painfully
+    patiently
+    perfectly
+    politely
     poorly
+    powerfully
+    previously
+    promptly
+    punctually
+    quarterly
     queerly
     quicker
     quickly
@@ -85,6 +160,12 @@ class Adverb
     rarely
     readily
     really
+    recently
+    recklessly
+    regularly
+    reluctantly
+    repeatedly
+    rightfully
     rigidly
     roughly
     rudely
@@ -92,20 +173,46 @@ class Adverb
     safely
     scarily
     seldom
+    selfishly
+    sensibly
+    seriously
     shakily
     sharply
     shrilly
     shyly
+    silently
+    since
+    sleepily
     slowly
+    smoothly
+    so
     softly
+    solemnly
     solidly
+    sometimes
     soon
+    speedily
+    stealthily
     sternly
+    still
+    straight
+    stupidly
+    successfully
+    suddenly
+    suspiciously
     sweetly
     swiftly
+    tenderly
     tensely
+    then
+    thoughtfully
     tightly
+    today
+    tomorrow
+    tonight
     truly
+    truthfully
+    unexpectedly
     upbeat
     upright
     upward
@@ -115,9 +222,13 @@ class Adverb
     vainly
     vastly
     very
+    victoriously
+    violently
+    vivaciously
     warmly
     weakly
     wearily
+    weekly
     well
     wetly
     wholly
@@ -125,6 +236,8 @@ class Adverb
     wisely
     wrongly
     yearly
+    yesterday
+    yet
     zestily
   }
 
