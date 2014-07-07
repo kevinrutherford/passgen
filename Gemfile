@@ -6,8 +6,6 @@ gem 'haml'
 gem 'activesupport'
 
 group :development, :test do
-  gem 'headless'
-  gem 'launchy'
   gem 'rack-test'
   gem 'cucumber'
   gem 'cucumber-sinatra'
