@@ -10,6 +10,7 @@ group :development, :test do
   gem 'cucumber'
   gem 'cucumber-sinatra'
   gem 'rspec'
+  gem 'capybara'
   gem 'selenium-webdriver'
   gem 'shoulda', :require => false
   gem 'headless'
